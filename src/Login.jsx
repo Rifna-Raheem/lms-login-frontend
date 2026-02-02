@@ -23,12 +23,41 @@ function Login() {
   };
 
   return (
-    <div className="login">
-      <h2>Login</h2>
-      <input placeholder="Username" onChange={e => setUsername(e.target.value)} />
-      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+    
+  <div className="login-wrapper">
+    
+    {/* Left Panel */}
+    <div className="login-left">
+      <h1>Welcome Back</h1>
+      <p>
+        Access your dashboard and continue your learning journey with us.
+      </p>
+    </div>
+
+    {/* Right Panel */}
+    <div className="login-right">
+      <h2>Login Account</h2>
+
+      <input
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={e => setUsername(e.target.value)}
+      />
+
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={e => setPassword(e.target.value)}
+      />
+
       <button onClick={handleLogin}>Login</button>
     </div>
+
+  </div>
+
+
   );
 }
 
